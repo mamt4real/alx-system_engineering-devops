@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "hello" -prune -user "guillaume" -exec chown betty hello
+if ["$(stat --format "%U" hello)" = "guillaume"]; then chown betty hello
