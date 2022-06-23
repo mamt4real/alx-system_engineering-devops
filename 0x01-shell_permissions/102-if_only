@@ -1,2 +1,2 @@
 #!/bin/bash
-find hello -prune -user "guillaume" -exec chown betty hello
+find . -name "hello" -prune -user "guillaume" -exec chown betty hello
