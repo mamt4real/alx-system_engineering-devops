@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ld --sort=time ./* | grep '^-' | head
+ls -d --sort=time * | head
