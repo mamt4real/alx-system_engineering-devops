@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# using conditions in a loop
 i="1"
 while [ "$i" -le 10 ]; do
 	echo "Best School"

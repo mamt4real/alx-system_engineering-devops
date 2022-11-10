@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# solving the popular fizzbuzz task
 i="1"
 while [ "$i" -le 100 ]; do
 	if [ $((i % 5)) -eq 0 ] && [ $((i % 3)) -eq 0 ]; then

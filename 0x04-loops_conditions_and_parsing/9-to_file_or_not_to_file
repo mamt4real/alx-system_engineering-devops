@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# file testing operators
 file="school"
 if [ -e "$file" ]; then
 	echo "$file file exists"

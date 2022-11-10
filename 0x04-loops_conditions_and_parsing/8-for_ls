@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# using cmds as range for for loop
 FILES="$(ls .)"
 for file in $FILES; do
 	echo "$file"
