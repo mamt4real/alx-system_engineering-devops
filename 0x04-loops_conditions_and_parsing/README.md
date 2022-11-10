@@ -20,3 +20,7 @@ Conditions with If and flags.
 * [8-for_ls](8-for_ls)
 * [9-to_file_or_not_to_file](9-to_file_or_not_to_file)
 * [10-fizzbuzz](10-fizzbuzz)
+* [100-read_and_cut](100-read_and_cut)
+* [101-tell_the_story_of_passwd](101-tell_the_story_of_passwd)
+* [102-lets_parse_apache_logs](102-lets_parse_apache_logs)
+[103-dig_the_data](103-dig_the_data)
