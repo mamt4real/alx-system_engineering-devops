@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 i="0"
 while [ "$i" -le $((60 * 12 + 59)) ]; do
 	if [ $((i % 60)) -eq 0 ]; then
