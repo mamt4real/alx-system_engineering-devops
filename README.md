@@ -14,3 +14,5 @@ This repository contains Tasks tailored to equip us with devops tasks.
 * [0x05-processes_and_signals](0x05-processes_and_signals)
 * [0x06-regular_expressions](0x06-regular_expressions)
 * [README.md](README.md)
+* [0x07-networking_basics](0x07-networking_basics)
+* [0x08-networking_basics_2](0x08-networking_basics_2)
