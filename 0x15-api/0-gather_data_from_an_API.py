@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# Testing how to fetch data grom an API
-""" Module document comment
+"""
 Fetch Todos of an Employee using his ID
 """
 import requests as req
@@ -34,7 +33,7 @@ def task_0(userId: str):
     completed = tuple(filter(
         lambda x: x["completed"], todos
     ))
-    name = user["name"]
+    name = user.get("name")
     print(
         f"Employee {name} is done with tasks({len(completed)}/{len(todos)}):")
     for t in completed:

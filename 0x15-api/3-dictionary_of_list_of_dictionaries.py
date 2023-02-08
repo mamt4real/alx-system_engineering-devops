@@ -3,8 +3,8 @@
 """
 Fetch Todos of all Employees
 """
-import requests as req
 import json
+import requests as req
 
 # base url of the api
 baseUrl = "https://jsonplaceholder.typicode.com"
@@ -29,14 +29,14 @@ def link_user_with_todos(user: dict):
     """Link a user with his todos"""
     if user == {}:
         return
-    userId = user["id"]
-    uname = user["username"]
+    userId = user.get("id")
+    uname = user.get("username")
     todos = get_todos(userId)
     tasks = list(map(
         lambda t: {
             "username": uname,
-            "task": t["title"],
-            "completed": t["completed"]},
+            "task": t.get("title"),
+            "completed": t.get("completed")},
         todos
     ))
     result = {userId: tasks}

@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-# Testing how to fetch data from an API
 """
-Fetch Todos of an Employee using his ID
+Fetch Todos of an Employee using his ID and save in a csv
 """
 import requests as req
 import sys
-import json
 
 # base url of the api
 baseUrl = "https://jsonplaceholder.typicode.com"
@@ -31,10 +29,10 @@ def task_1(userId: str):
     user = get_user(userId)
     if user == {}:
         return
-    uname = user["username"]
+    uname = user.get("username")
     todos = get_todos(userId)
     joined = "\n".join(map(
-        lambda t: f'"{userId}","{uname}","{t["completed"]}","{t["title"]}"',
+        lambda t: f'"{userId}","{uname}","{t.get("completed")}","{t.get("title")}"',
         todos
     ))
     with open(f"{userId}.csv", "w") as f:

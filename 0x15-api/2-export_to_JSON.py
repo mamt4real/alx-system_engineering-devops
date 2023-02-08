@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-# Testing how to fetch data grom an API
 """
-Fetch Todos of an Employee using his ID
+Fetch Todos of an Employee using his ID and save in a json file
 """
+import json
 import requests as req
 import sys
-import json
 
 # base url of the api
 baseUrl = "https://jsonplaceholder.typicode.com"
@@ -31,12 +30,12 @@ def task_2(userId: str):
     user = get_user(userId)
     if user == {}:
         return
-    uname = user["username"]
+    uname = user.get("username")
     todos = get_todos(userId)
     tasks = list(map(
         lambda t: {
-            "task": t["title"],
-            "completed": t["completed"],
+            "task": t.get("title"),
+            "completed": t.get("completed"),
             "username": uname},
         todos
     ))
