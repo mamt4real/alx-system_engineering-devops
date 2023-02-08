@@ -13,14 +13,14 @@ baseUrl = "https://jsonplaceholder.typicode.com"
 def get_todos(userId: str):
     """Fetch All Todos of a User"""
     res = req.get(
-        f"{baseUrl}/todos?userId={userId}")
+        "{}/todos?userId={}".format(baseUrl, userId))
     return res.json()
 
 
 def get_user(userId: str):
     """Fetch a User"""
     res = req.get(
-        f"{baseUrl}/users/{userId}"
+        "{}/users/{}".format(baseUrl, userId)
     )
     return res.json()
 
@@ -40,7 +40,7 @@ def task_2(userId: str):
         todos
     ))
     result = {userId: tasks}
-    with open(f"{userId}.json", "w") as f:
+    with open("{}.json".format(userId), "w") as f:
         f.write(json.dumps(result))
 
 

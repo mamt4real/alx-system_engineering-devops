@@ -13,14 +13,14 @@ baseUrl = "https://jsonplaceholder.typicode.com"
 def get_todos(userId: str):
     """Fetch All Todos of a User"""
     res = req.get(
-        f"{baseUrl}/todos?userId={userId}")
+        "{}/todos?userId={}".format(baseUrl, userId))
     return res.json()
 
 
 def get_users():
     """Fetch all Users"""
     res = req.get(
-        f"{baseUrl}/users"
+        "{}/users".format(baseUrl)
     )
     return res.json()
 
