@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Using a public API "https://jsonplaceholder.typicode.com" to
-Fetch Todos of an Employee using his ID"""
+"""Using a public API 'https://jsonplaceholder.typicode.com'"""
 import requests as req
 import sys
 
