@@ -32,7 +32,9 @@ def task_1(userId: str):
     uname = user.get("username")
     todos = get_todos(userId)
     joined = "\n".join(map(
-        lambda t: f'"{userId}","{uname}","{t.get("completed")}","{t.get("title")}"',
+        lambda t: '"{}","{}","{}","{}"'.format(
+            userId, uname, t.get("completed"), t.get("title")
+        ),
         todos
     ))
     with open(f"{userId}.csv", "w") as f:
