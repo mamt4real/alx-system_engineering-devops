@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""
+""" Module document comment
 Fetch Todos of an Employee using his ID
 """
 import requests as req
 import sys
-import json
 
 # base url of the api
 baseUrl = "https://jsonplaceholder.typicode.com"
